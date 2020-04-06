@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>HTML Academy: Пинк</title>
+  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font" crossorigin="anonymous">
+  <link rel="icon" href="img/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="img/favicon-32x32.png" sizes="32x32" type="image/png">
+</head>
+
+<body>
+  <header class="page-header page-header--full" aria-label=" Шапка сайта pink">
+    <div class="page-header__wrapper" aria-label="Шапка сайта pink">
+      <a class="page-header__logo-link" href="index.html" aria-label="Логотип Pink">
+        <svg class="page-header__logo-image page-header__logo-image--mobile" width="74" height="22">
+          <use xlink:href="../img/sprite.svg#icon-logo-pink-white-mobile"></use>
+        </svg>
+        <svg class="page-header__logo-image page-header__logo-image--tablet" width="146" height="40">
+          <use xlink:href="img/sprite.svg#icon-logo-pink-white-tablet"></use>
+        </svg>
+        <svg class="page-header__logo-image page-header__logo-image--desktop" width="146" height="40">
+          <use xlink:href="img/sprite.svg#icon-logo-pink-desktop"></use>
+        </svg>
+      </a>
+      <nav class="main-nav" aria-label="Основное меню">
+        <button class="main-nav__toggle" type="button" aria-label="Открыть или закрыть меню">
+          <svg class="main-nav__icon-cross main-nav__icon-cross--hide" width="23" height="23">
+            <use xlink:href="img/sprite.svg#icon-menu-cross"></use>
+          </svg>
+          <svg class="main-nav__icon-burger" width="50" height="24">
+            <use xlink:href="img/sprite.svg#icon-menu-burger"></use>
+          </svg>
+        </button>
+        <ul class="main-nav__list site-list" aria-label="Список страниц главного меню сайта">
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html" aria-label="Перейти на главную страницу">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="photo.html" aria-label="Перейти на страницу фотографии">Фотографии</a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a class="site-list__link" href="#" aria-label="Сейчас мы на странице конкурса">Конкурс</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="https://htmlacademy.ru/" target="_blank">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main aria-label="Основное содержание страницы">
+    <div class="page-title page-title--form">
+      <h1 class="page-title__text page-title__text--form">
+        Конкурс на самое безбашенное путешествие с Пинк
+      </h1>
+    </div>
+    <form class="review-form" action="https://echo.htmlacademy.ru" method="POST">
+      <div class="review-form__title" aria-label="условия конкурса">
+        <p>
+          Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+          <span class="review-form__hidden-text">
+            Пожалуйста, заполните форму ниже:
+          </span>
+        </p>
+      </div>
+      <div class="review-form__wrapper" aria-label="форма для заполнения">
+        <fieldset class="name-fieldset" aria-label="Здесь нужно заполнить ваши Фамилию, Имя и Отчество">
+          <label class="name-fieldset__item">
+            <span class="name-fieldset__field-name">
+              Фамилия:
+            </span>
+            <input class="name-fieldset__text-input" type="text" name="user-surname" placeholder="Укажите фамилию *" pattern="[А-Яа-яЁё \s]+$" data-error="Ошибка, перепроверьте фамилию" title="Только русские буквы" required="">
+          </label>
+          <label class="name-fieldset__item">
+            <span class="name-fieldset__field-name">
+              Имя:
+            </span>
+            <input class="name-fieldset__text-input" type="text" name="user-name" placeholder="Введите ваше имя *" pattern="[А-Яа-яЁё \s]+$" data-error="Ошибка, перепроверьте имя" title="Только русские буквы" required="">
+          </label>
+          <label class="name-fieldset__item">
+            <span class="name-fieldset__field-name">
+              Отчество:
+            </span>
+            <input class="name-fieldset__text-input" type="text" name="user-patronym" placeholder="Hу и отчество тоже" pattern="[А-Яа-яЁё \s]+$" data-error="Ошибка, перепроверьте отчество" title="Только русские буквы" required="">
+          </label>
+        </fieldset>
+        <fieldset class="achievements-fieldset" aria-label="Здесь нужно отметить ваши достижения в путешествии">
+          <h2 class="achievements-fieldset__title">
+            Ваши безбашенные достижения в путешествии
+          </h2>
+          <div class="achievements-fieldset__column-wrapper">
+            <div class="achievements-fieldset__column">
+              <label class="checkbox-field">
+                <input class="checkbox-field__input visually-hidden" type="checkbox" id="checkbox-1" name="user-achievements" checked="">
+                <span class="checkbox-field__checkbox">
+                </span>
+                <span class="checkbox-field__input-text">
+                  Сделал селфи с акулой
+                </span>
+              </label>
+              <label class="checkbox-field">
+                <input class="checkbox-field__input visually-hidden" type="checkbox" id="checkbox-2" name="user-achievements" checked="">
+                <span class="checkbox-field__checkbox">
+                </span>
+                <span class="checkbox-field__input-text">
+                  Обгорел на пляже
+                </span>
+              </label>
+            </div>
+            <div class="achievements-fieldset__column">
+              <label class="checkbox-field">
+                <input class="checkbox-field__input visually-hidden" type="checkbox" id="checkbox-3" name="user-achievements">
+                <span class="checkbox-field__checkbox">
+                </span>
+                <span class="checkbox-field__input-text">
+                  Видел Чака Норриса
+                </span>
+              </label>
+              <label class="checkbox-field">
+                <input class="checkbox-field__input visually-hidden" type="checkbox" id="checkbox-4" name="user-achievements">
+                <span class="checkbox-field__checkbox">
+                </span>
+                <span class="checkbox-field__input-text">
+                  Накупил сувениров
+                </span>
+              </label>
+            </div>
+            <div class="achievements-fieldset__column">
+              <label class="checkbox-field">
+                <input class="checkbox-field__input visually-hidden" type="checkbox" id="checkbox-5" name="user-achievements" checked="">
+                <span class="checkbox-field__checkbox">
+                </span>
+                <span class="checkbox-field__input-text">
+                  Удержал башню
+                </span>
+              </label>
+              <label class="checkbox-field">
+                <input class="checkbox-field__input visually-hidden" type="checkbox" id="checkbox-6" name="user-achevements">
+                <span class="checkbox-field__checkbox">
+                </span>
+                <span class="checkbox-field__input-text">
+                  Разгромил отель
+                </span>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="contacts-fieldset" aria-label="Здесь нужно заполнить ваши контактные данные">
+          <h2 class="contacts-fieldset__title">
+            Контактная информация
+          </h2>
+          <div class="contacts-fieldset__container">
+            <label class="contacts-fieldset__item">
+              <span class="contacts-fieldset__info contacts-fieldset__info--mobile">
+                Номер телефона
+              </span>
+              <span class="contacts-fieldset__input-wrapper contacts-fieldset__input-wrapper--phone-icon">
+                <input class="contacts-fieldset__input" type="text" id="zipCode" name="user-phone" pattern="\+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="Номер, пожалуйста" data-error="Ошибка, укажите номер" title="+7(888)888-88-88" required="">
+              </span>
+            </label>
+            <label class="contacts-fieldset__item">
+              <span class="contacts-fieldset__info contacts-fieldset__info--mobile">
+                Адрес почты
+              </span>
+              <span class="contacts-fieldset__input-wrapper contacts-fieldset__input-wrapper--email-icon">
+                <input class="contacts-fieldset__input" type="email" id="emailField" name="user-email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" placeholder="Введите почту *" data-error="Ошибка, перепроверьте почту" title="your-mail@domain.ru" required="">
+              </span>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="application-fieldset" aria-label="Здесь нужно указать на какой платформе вы используете приложение Pink">
+          <h2 class="application-fieldset__title">
+            С каким приложением путешествовали?
+          </h2>
+          <div class="application-fieldset__input-wrapper">
+            <label class="radio-field">
+              <input class="radio-field__input visually-hidden" type="radio" name="user-application" id="radio1" checked="">
+              <span class="radio-field__checkbox"></span>
+              <span class="radio-field__input-text">Pink для iOS</span>
+            </label>
+            <label class="radio-field">
+              <input class="radio-field__input visually-hidden" type="radio" name="user-application" id="radio2">
+              <span class="radio-field__checkbox"></span>
+              <span class="radio-field__input-text">Pink на Android</span>
+            </label>
+            <label class="radio-field">
+              <input class="radio-field__input visually-hidden" type="radio" name="user-application" id="radio3">
+              <span class="radio-field__checkbox"></span>
+              <span class="radio-field__input-text">Windows Phone</span>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="review-fieldset" aria-label="Здесь вы можете оставить отзыв о приложении Pink">
+          <h2 class="review-fieldset__title">
+            Опишите свои эмоции
+          </h2>
+          <div class="review-fieldset__input-wrapper">
+            <textarea class="review-fieldset__input" name="user-review" data-errpr="Ошибка, оставьте отзыв" rows="6" cols="30" placeholder="Можно прям в красках, не стесняясь в выражениях" title="Только русские буквы" required=""></textarea>
+          </div>
+        </fieldset>
+        <div class="review-form__send-button">
+          <input class="button button--send-form" type="submit" name="contest-form-submit" value="Отправить форму">
+          <span class="review-form__note">
+            <span class="review-form__note-symbol">*</span>
+            — обязательные <span class="review-form__purpose-text">для заполнения</span> поля
+          </span>
+        </div>
+    </div></form>
+    
+  </main>
+  <footer class="page-footer" aria-label="Подвал сайта">
+    <div class="page-footer__container">
+      <a class="page-footer__logo" href="index.html" aria-label="Логотип Pink, перейти на главную страницу">
+        <svg class="page-footer__logo-image page-footer__logo-image--tablet" width="146" height="40">
+          <use xlink:href="img/sprite.svg#icon-logo-pinky-tablet"></use>
+        </svg>
+        <svg class="page-footer__logo-image page-footer__logo-image--desktop" width="146" height="40">
+          <use xlink:href="img/sprite.svg#icon-logo-pink-blue-desktop"></use>
+        </svg>
+      </a>
+      <ul class="social-links social-links__list">
+        <li>
+          <a class="social-links__link social-links__link--twitter" href="#twitter" title="twitter">
+            <svg class="social-links__icon social-links__icon--twitter" width="17" height="14">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="social-links__link social-links__link--facebook" href="#facebook" title="facebook">
+            <svg class="social-links__icon social-links__icon--facebook" width="8" height="18">
+              <use xlink:href="img/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="social-links__link social-links__link--youtube" href="#youtube">
+            <svg class="social-links__icon social-links__icon--youtube" width="14" height="13">
+              <use xlink:href="img/sprite.svg#icon-youtube"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="developer" aria-label="Этот сайт разработан на интенсиве HTML/CSS уровень 2">
+        <span class="developer__text">Разработано</span>
+        <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Научиться делать такие сайты вы можете здесь - перейти на сайт HTML Academy">
+          <svg class="developer__academy-logo" width="27" height="34">
+            <use xlink:href="img/sprite.svg#icon-logo-htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <article class="failure-popup">
+    <h2 class="failure-popup__title">
+      Что-то пошло не так!
+    </h2>
+    <p class="failure-popup__text">
+      Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+    </p>
+    <button class="failure-popup__button" id="failure-popup-btn" type="button" value="Ок">Ок</button>
+  </article>
+  <article class="success-popup">
+    <div class="success-popup__wrapper">
+      <h2 class="success-popup__title">
+        Ваша заявка отправлена
+      </h2>
+      <p class="success-popup__text">
+        Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее &nbsp;время мы рассмотрим ее и оповестим
+        вас.
+      </p>
+    </div>
+    <div class="success-popup__button-wrapper">
+      <button class="success-popup__button" id="success-popup-btn" type="button" value="Закрыть окно">Закрыть
+        окно</button>
+    </div>
+  </article>
+  <script src="js/form.min.js" type="text/javascript"></script>
+  <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.classList"></script>
+  <script src="js/picturefill.min.js" async=""></script>
+  <script defer="" src="js/svgxuse.min.js"></script>
+</body>
+
+</html>
